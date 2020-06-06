@@ -1,6 +1,7 @@
 @import "reset.css";
 
 body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #636e72;
     width: 100%;
     height: 100vh;
@@ -30,12 +31,6 @@ body {
 ::-webkit-input-placeholder { color: #B5C6D3; }
 :-moz-placeholder { color: #B5C6D3; }
 :-ms-input-placeholder { color: #B5C6D3; }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
 .content__numbers {
     display: grid;
     grid-template-columns: repeat(4, 55px);
@@ -43,26 +38,37 @@ input::-webkit-inner-spin-button {
     grid-gap: 10px;
 }
 .content__numbers .clean-button {
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
 }
-.content__numbers .number_item:nth-child(15) {
+.content .content__numbers .backspace-button {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.content__numbers .number_item:nth-child(16) {
     grid-column: 1 / 3;
 }
 .content__numbers .number_item,
 .content__numbers .clean-button,
+.content__numbers .backspace-button,
 .content__numbers .equals-button {
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     color: #B5C6D3;
-    /* background-color: rgba(0,0,0,0.4); */
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.1);
+    /* background-color: transparent; */
     border: none;
     border-radius: 50px
 }
 .content__numbers .clean-button,
-.content__numbers .number_item:nth-child(2),
-.content__numbers .number_item:nth-child(6),
-.content__numbers .number_item:nth-child(10),
-.content__numbers .number_item:nth-child(14),
+.content__numbers .backspace-button,
+.content__numbers .number_item:nth-child(3),
+.content__numbers .number_item:nth-child(7),
+.content__numbers .number_item:nth-child(11),
+.content__numbers .number_item:nth-child(15),
 .content__numbers .equals-button{
-    background-color: rgba(42,194,244, 0.5);
+    background-color: rgba(42,194,244, 0.3);
+    font-size: 22px;
 }
