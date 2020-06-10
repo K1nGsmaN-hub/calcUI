@@ -9,28 +9,66 @@ body {
     justify-content: center;
     align-items: center;
 }
+.content.active-horizontal {
+    width: 390px;
+}
 .content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
     border-radius: 25px;
     background: linear-gradient(45deg, #012B43, #016875);
     width: 250px;
+    max-height: 475px;
     box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    transition: width .3s ease;
+}
+.content .rotate-button {
+    position: absolute;
+    font-size: 18px;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: rgba(0,0,0,0.5);
 }
 .content__display {
+    width: 100%;
     margin-bottom: 10px;    
 }
 .content__display input {
     text-align: right;
-    font-size: 25px;
-    color: #B5C6D3;
+    font-size: 18px;
+    color: #aab5bd;
     background-color: transparent;
     padding: 40px 10px 10px;
     width: calc(100% - 20px);
     border: none;
 }
+.content__display input#result-monitor {
+    font-size: 25px;
+    color: #B5C6D3;
+    padding-top: 0;
+}
 ::-webkit-input-placeholder { color: #B5C6D3; }
 :-moz-placeholder { color: #B5C6D3; }
 :-ms-input-placeholder { color: #B5C6D3; }
+
+.content__formulas {
+    height: 0;
+    transform: scale(0);
+}
+.content__formulas.visible {
+    display: grid;
+    grid-template-columns: repeat(2, 55px);
+    grid-template-rows: repeat(5, 55px);
+    grid-gap: 10px;
+    margin-right: 10px;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+    transition-delay: 0.3s;
+}
 .content__numbers {
     display: grid;
     grid-template-columns: repeat(4, 55px);
@@ -50,7 +88,7 @@ body {
 .content__numbers .number_item:nth-child(16) {
     grid-column: 1 / 3;
 }
-.content__numbers .number_item,
+.content .buttons,
 .content__numbers .clean-button,
 .content__numbers .backspace-button,
 .content__numbers .equals-button {
@@ -62,6 +100,7 @@ body {
     border: none;
     border-radius: 50px
 }
+.content__formulas .buttons,
 .content__numbers .clean-button,
 .content__numbers .backspace-button,
 .content__numbers .number_item:nth-child(3),
@@ -70,5 +109,5 @@ body {
 .content__numbers .number_item:nth-child(15),
 .content__numbers .equals-button{
     background-color: rgba(42,194,244, 0.3);
-    font-size: 22px;
+    font-size: 20px;
 }

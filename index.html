@@ -10,32 +10,53 @@
 </head>
 <body>
     <div class="content">
+        <i class="fas fa-undo rotate-button"></i>
         <div class="content__display">
-            <input id="display" type="text" placeholder="0,00" value="" readonly>
+            <input id="input-monitor" type="text" placeholder="0" value="" readonly>
+            <input id="result-monitor" type="text" placeholder="0" value="" readonly>
         </div>
+
+        <div class="content__formulas">
+            <!-- first row -->
+            <input type="button" value="(" class="formula_item buttons">
+            <input type="button" value=")" class="formula_item buttons">
+            <!-- second row -->
+            <input type="button" value="sin" class="formula_item buttons">
+            <input type="button" value="cos" class="formula_item buttons">
+            <!-- third row -->
+            <input type="button" value="tan" class="formula_item buttons">
+            <input type="button" value="log" class="formula_item buttons">
+            <!-- fourth row -->
+            <input type="button" value="&#960;" class="formula_item buttons">
+            <input type="button" value="!" class="formula_item buttons">
+            <!-- fifth row -->
+            <input type="button" value="&#8730;" class="formula_item buttons">
+            <input type="button" value="x&#8319;" class="formula_item buttons">
+        </div>
+
         <div class="content__numbers">
             <!-- first row -->
             <input type="button" class="clean-button" value="AC">
             <div class="backspace-button"><i class="fas fa-backspace"></i></div>
-            <input type="button" class="number_item" value="&#247;">
+            <input type="button" class="number_item buttons" value="&#247;">
             <!-- second row -->
-            <input type="button" class="number_item" value="7">
-            <input type="button" class="number_item" value="8">
-            <input type="button" class="number_item" value="9">
-            <input type="button" class="number_item" value="&#215;">
+            <input type="button" class="number_item buttons" value="7">
+            <input type="button" class="number_item buttons" value="8">
+            <input type="button" class="number_item buttons" value="9">
+            <input type="button" class="number_item buttons" value="&#215;">
             <!-- third row -->
-            <input type="button" class="number_item" value="4">
-            <input type="button" class="number_item" value="5">
-            <input type="button" class="number_item" value="6">
-            <input type="button" class="number_item" value="-">
+            <input type="button" class="number_item buttons" value="4">
+            <input type="button" class="number_item buttons" value="5">
+            <input type="button" class="number_item buttons" value="6">
+            <input type="button" class="number_item buttons" value="-">
             <!-- fourth row -->
-            <input type="button" class="number_item" value="1">
-            <input type="button" class="number_item" value="2">
-            <input type="button" class="number_item" value="3">
-            <input type="button" class="number_item" value="+">
+            <input type="button" class="number_item buttons" value="1">
+            <input type="button" class="number_item buttons" value="2">
+            <input type="button" class="number_item buttons" value="3">
+            <input type="button" class="number_item buttons" value="+">
             <!-- fiveth row-->
-            <input type="button" class="number_item" value="0">
-            <input type="button" class="number_item" value=".">
+            <input type="button" class="number_item buttons" value="0">
+            <input type="button" class="number_item buttons" value=".">
             <input type="button" class="equals-button" value="=">
         </div>
     </div>
