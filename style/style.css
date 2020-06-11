@@ -6,6 +6,7 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -18,6 +19,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    margin-bottom: 40px;
     border-radius: 25px;
     background: linear-gradient(45deg, #012B43, #016875);
     width: 250px;
@@ -27,11 +29,11 @@ body {
 }
 .content .rotate-button {
     position: absolute;
-    font-size: 18px;
+    font-size: 21px;
     left: 20px;
     top: 20px;
     cursor: pointer;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.3);
 }
 .content__display {
     width: 100%;
@@ -110,4 +112,10 @@ body {
 .content__numbers .equals-button{
     background-color: rgba(42,194,244, 0.3);
     font-size: 20px;
+}
+.copiright .copiright_text a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
 }

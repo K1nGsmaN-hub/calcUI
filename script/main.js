@@ -7,7 +7,17 @@ const buttonNumbers = document.querySelectorAll('.number_item'), // All button w
       buttonBackspace = document.querySelector('.backspace-button'); // backsapce button
 
 // horizontal calc consts
-const rotateButton = document.querySelector('.rotate-button');
+const buttonRotate = document.querySelector('.rotate-button'),
+      buttonFormulas = document.querySelectorAll('.formula_item')
+      buttonBrackets = document.querySelectorAll('.bracket');
+
+Math.factorial = function (n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return Math.factorial(n-1)*n
+    }
+}
 
 for (buttonNumber of buttonNumbers) {
     buttonNumber.addEventListener('click', function () {
@@ -33,8 +43,31 @@ buttonBackspace.addEventListener('click', function() {
     inputMonitor.value = inputMonitor.value.substring(0, inputMonitor.value.length-1); // Delete the last symbol
 })
 
-
-rotateButton.addEventListener('click', function () {
+// Code for horizontal orintation
+buttonRotate.addEventListener('click', function () {
     document.querySelector('.content').classList.toggle('active-horizontal');
     document.querySelector('.content__formulas').classList.toggle('visible');
 })
+
+for (buttonFormula of buttonFormulas) {
+    buttonFormula.addEventListener('click', function () {
+        if (this.value == 'π') {
+            inputMonitor.value = inputMonitor.value + 'Math.PI';
+        } else if (this.value == '!') {
+            inputMonitor.value = inputMonitor.value + 'Math.factorial(';
+        } else if (this.value == '√') {
+            inputMonitor.value = inputMonitor.value + 'Math.sqrt(';
+        } else if (this.value == 'xⁿ') {
+            inputMonitor.value = inputMonitor.value + '**'; 
+        }
+        else {
+            inputMonitor.value = inputMonitor.value + 'Math.' + this.value + '(';
+        }
+    })
+}
+
+for (buttonBracket of buttonBrackets) {
+    buttonBracket.addEventListener('click', function () {
+        inputMonitor.value = inputMonitor.value + this.value;
+    })
+}

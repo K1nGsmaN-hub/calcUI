@@ -19,3 +19,13 @@ to be continued...
 * Horizontal orentation
 * Rotate button
 * Unworkable buttons for horizontal orentation
+## CalcUI v2.0 !!! - Jun12
+![](https://i.ibb.co/BVz77Gr/calc-UI-v2-0.png)
+### Added:
+* implemented buttons of formulas
+1. cos, sin tan, log
+2. pi, factorial, sqrt - √, power - xⁿ
+3. brackets
+* change icon to rotate button
+* copiright
+## New monitor without JS methods(Math. etc), coming soon...
