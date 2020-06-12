@@ -21,12 +21,13 @@ Math.factorial = function (n) {
 
 for (buttonNumber of buttonNumbers) {
     buttonNumber.addEventListener('click', function () {
-        if (this.value == '÷') {
-            inputMonitor.value = inputMonitor.value + '/';
-        } else if (this.value == '×') {
-            inputMonitor.value = inputMonitor.value + '*';
-        }else {
-            inputMonitor.value = inputMonitor.value + this.value; // Display a number to the calcMonitor
+        switch (this.value) {
+            case '÷': 
+                inputMonitor.value = inputMonitor.value + '/'; break;
+            case '×': 
+                inputMonitor.value = inputMonitor.value + '*'; break;
+            default: 
+                inputMonitor.value = inputMonitor.value + this.value;
         }
     })
 }
@@ -51,17 +52,17 @@ buttonRotate.addEventListener('click', function () {
 
 for (buttonFormula of buttonFormulas) {
     buttonFormula.addEventListener('click', function () {
-        if (this.value == 'π') {
-            inputMonitor.value = inputMonitor.value + 'Math.PI';
-        } else if (this.value == '!') {
-            inputMonitor.value = inputMonitor.value + 'Math.factorial(';
-        } else if (this.value == '√') {
-            inputMonitor.value = inputMonitor.value + 'Math.sqrt(';
-        } else if (this.value == 'xⁿ') {
-            inputMonitor.value = inputMonitor.value + '**'; 
-        }
-        else {
-            inputMonitor.value = inputMonitor.value + 'Math.' + this.value + '(';
+        switch (this.value) {
+            case 'π':
+                inputMonitor.value = inputMonitor.value + 'Math.PI'; break;
+            case '!':
+                inputMonitor.value = inputMonitor.value + 'Math.factorial('; break;
+            case '√':
+                inputMonitor.value = inputMonitor.value + 'Math.sqrt('; break;
+            case 'xⁿ':
+                inputMonitor.value = inputMonitor.value + '**'; break;
+            default:
+                inputMonitor.value = inputMonitor.value + 'Math.' + this.value + '(';
         }
     })
 }

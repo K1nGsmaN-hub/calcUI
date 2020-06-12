@@ -28,4 +28,7 @@ to be continued...
 3. brackets
 * change icon to rotate button
 * copiright
+## CalcUI v2.1 - Jun13
+### Added:
+* changed "if-else if-else" costruction to "swith-case"
 ## New monitor without JS methods(Math. etc), coming soon...
